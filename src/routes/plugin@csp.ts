@@ -12,7 +12,6 @@ export const onRequest: RequestHandler = ev => {
     `frame-src 'self' 'nonce-${nonce}'`,
     `object-src 'none'`,
     `base-uri 'self'`,
-    `require-trusted-types-for 'script'`,
   ];
 
   ev.headers.set("Content-Security-Policy-Report-Only", csp.join("; "));
